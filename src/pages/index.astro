@@ -4,7 +4,7 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<main class="m-auto padding-auto max-w-2xl text-white text-lg leading-6 ">
 		<svg
 			class="astro-a"
 			width="495"
@@ -33,12 +33,12 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1 class=" text-6xl font-bold text-center m-4">Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			<strong class="bg-accent-light">Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		<ul role="list" class="link-card-grid">
+		<ul role="list" class=" grid gap-8 p-0" style="grid-auto-columns: repeat(auto-fit, minmax(24ch, 1fr))">
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -64,15 +64,6 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -81,13 +72,6 @@ import Card from '../components/Card.astro';
 		width: 220px;
 		height: auto;
 		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -110,14 +94,5 @@ import Card from '../components/Card.astro';
 		color: rgb(var(--accent-light));
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>
